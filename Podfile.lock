@@ -1,16 +1,21 @@
 PODS:
+  - Starscream (4.0.8)
   - TwilioVoice (6.11.1)
 
 DEPENDENCIES:
+  - Starscream (~> 4.0.4)
   - TwilioVoice (~> 6.11)
 
 SPEC REPOS:
+  https://github.com/cocoapods/specs:
+    - Starscream
   trunk:
     - TwilioVoice
 
 SPEC CHECKSUMS:
+  Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
   TwilioVoice: 651fa3480921bf219c3ca2f4337f6f0e50495e37
 
-PODFILE CHECKSUM: ec2ea870066ca942020591890c863a72efec7855
+PODFILE CHECKSUM: cec39cd5c44b45c3a09c166a6bb5702f633ef7f3
 
 COCOAPODS: 1.15.2

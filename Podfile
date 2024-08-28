@@ -9,6 +9,7 @@ target 'CallEm' do
 
   # Pods for CallEm
   pod 'TwilioVoice', '~> 6.11'
+  pod 'Starscream', '~> 4.0.4'
 
   target 'CallEmTests' do
     inherit! :search_paths

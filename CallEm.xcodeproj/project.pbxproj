@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B32944EFC2C5D7CA90344FE /* Pods_CallEmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4950CAEF3FC34C575EB1997 /* Pods_CallEmTests.framework */; };
 		9FD18E1F893A865D4F6E48F3 /* Pods_CallEm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE44637E04B44FEFF769AA4F /* Pods_CallEm.framework */; };
+		C035F8272C7BAFF500ABE31B /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = C035F8262C7BAFF500ABE31B /* SocketIO */; };
+		C035F8292C7BB03100ABE31B /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035F8282C7BB03100ABE31B /* Socket.swift */; };
 		C087A3852C73AE6200DF7170 /* CallEmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3842C73AE6200DF7170 /* CallEmApp.swift */; };
 		C087A3872C73AE6200DF7170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3862C73AE6200DF7170 /* ContentView.swift */; };
 		C087A3892C73AE6300DF7170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C087A3882C73AE6300DF7170 /* Assets.xcassets */; };
@@ -46,6 +48,7 @@
 		7B06437FFE1E0E293AA76FFB /* Pods-CallEm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallEm.debug.xcconfig"; path = "Target Support Files/Pods-CallEm/Pods-CallEm.debug.xcconfig"; sourceTree = "<group>"; };
 		826A6C6A76E07E8D0982DC9E /* Pods-CallEm-CallEmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallEm-CallEmUITests.release.xcconfig"; path = "Target Support Files/Pods-CallEm-CallEmUITests/Pods-CallEm-CallEmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE44637E04B44FEFF769AA4F /* Pods_CallEm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallEm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C035F8282C7BB03100ABE31B /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		C087A3812C73AE6200DF7170 /* CallEm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallEm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C087A3842C73AE6200DF7170 /* CallEmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEmApp.swift; sourceTree = "<group>"; };
 		C087A3862C73AE6200DF7170 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D5C4102C756B9D0036804A /* SwiftJWT in Frameworks */,
+				C035F8272C7BAFF500ABE31B /* SocketIO in Frameworks */,
 				9FD18E1F893A865D4F6E48F3 /* Pods_CallEm.framework in Frameworks */,
 				C0EF04CE2C7589710064476F /* KeychainAccess in Frameworks */,
 			);
@@ -145,6 +149,7 @@
 				C087A3882C73AE6300DF7170 /* Assets.xcassets */,
 				C087A38A2C73AE6300DF7170 /* Preview Content */,
 				C0D5C40C2C756A920036804A /* TokenManager.swift */,
+				C035F8282C7BB03100ABE31B /* Socket.swift */,
 			);
 			path = CallEm;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			packageProductDependencies = (
 				C0D5C40F2C756B9D0036804A /* SwiftJWT */,
 				C0EF04CD2C7589710064476F /* KeychainAccess */,
+				C035F8262C7BAFF500ABE31B /* SocketIO */,
 			);
 			productName = CallEm;
 			productReference = C087A3812C73AE6200DF7170 /* CallEm.app */;
@@ -274,6 +280,7 @@
 			packageReferences = (
 				C0D5C40E2C756B680036804A /* XCRemoteSwiftPackageReference "Swift-JWT" */,
 				C0EF04CC2C7589710064476F /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				C035F8252C7BAFF500ABE31B /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = C087A3822C73AE6200DF7170 /* Products */;
 			projectDirPath = "";
@@ -422,6 +429,7 @@
 			files = (
 				C087A3872C73AE6200DF7170 /* ContentView.swift in Sources */,
 				C0D5C40D2C756A920036804A /* TokenManager.swift in Sources */,
+				C035F8292C7BB03100ABE31B /* Socket.swift in Sources */,
 				C087A3852C73AE6200DF7170 /* CallEmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C035F8252C7BAFF500ABE31B /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		C0D5C40E2C756B680036804A /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Kitura/Swift-JWT";
@@ -779,6 +795,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C035F8262C7BAFF500ABE31B /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C035F8252C7BAFF500ABE31B /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
 		C0D5C40F2C756B9D0036804A /* SwiftJWT */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0D5C40E2C756B680036804A /* XCRemoteSwiftPackageReference "Swift-JWT" */;
