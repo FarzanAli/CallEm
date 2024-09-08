@@ -189,45 +189,6 @@ class CallManager: NSObject, ObservableObject, CallDelegate, URLSessionDelegate 
     }
 }
 
-// A completion of this view will send a websocket message and update outgoingCallerId in keychain
-struct VerifyNumber: View {
-    @State private var phoneNumber: String = ""
-    @State private var verificationCode: String = ""
-    let callManager: CallManager
-    
-    
-    var body: some View{
-        VStack{
-            VStack(spacing: 20) {
-                TextField("Enter phone number", text: $phoneNumber)
-                    .font(.title)
-                    .padding()
-                    .keyboardType(.phonePad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(.center)
-                
-                if verificationCode.count != 0 {
-                    Text(verificationCode).padding()
-                } else {
-                    Button(action: {
-                        callManager.verify(phoneNumber: phoneNumber){ res in
-                            verificationCode = res!
-                        }
-                    }) {
-                        Text("Submit")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                    }
-                }
-            }
-            .padding()
-        }
-    }
-}
-
 struct ContentView: View {
     @ObservedObject private var callManager = CallManager()
     @ObservedObject private var socket = Socket()
@@ -253,53 +214,49 @@ struct ContentView: View {
             if socket.getOutgoingCallerSid() == nil || callManager.callerId == "Unknown" {
                 VerifyNumber(callManager: callManager)
             } else {
+                
                 if callManager.callerId.isEmpty {
                     Text("Caller ID Empty...")
                         .onAppear {
                             fetchCallerId()
                         }
-                } else {
+                } else if callManager.callStatus != "Call connected" {
                     Text("Caller ID: \(callManager.callerId)")
                 }
                 
-                Text(callManager.callStatus)
-                    .padding()
                 
-                HStack{
+//                Text(callManager.callStatus)
+//                    .padding()
+                
+                if callManager.callStatus == "Call connected"{
+                    VStack{
+                        Spacer()
+                        Text("Caller ID: \(callManager.callerId)").padding(.vertical, 40)
+                        
+                        NavigationView {
+                            MenuView(rootOptions: menuTree.children, callManager: callManager)
+                        }
+                        
+                        Button("End Call") {
+                            callManager.endCall()
+                        }.padding()
+                        
+//                        KeyPad(callManager: callManager)
+                        Spacer()
+                    }
+                    
+                } else {
                     Button("Make Call") {
                         callManager.makeCall()
                     }.padding()
-                    
-                    Button("End Call") {
-                        callManager.endCall()
-                    }.padding()
                 }
-                
-                HStack{
-                    DialButton(number: "1", manager: callManager)
-                    DialButton(number: "2", manager: callManager)
-                    DialButton(number: "3", manager: callManager)
-                }
-                HStack{
-                    DialButton(number: "4", manager: callManager)
-                    DialButton(number: "5", manager: callManager)
-                    DialButton(number: "6", manager: callManager)
-                }
-                HStack{
-                    DialButton(number: "7", manager: callManager)
-                    DialButton(number: "8", manager: callManager)
-                    DialButton(number: "9", manager: callManager)
-                }
-                HStack{
-                    DialButton(number: "*", manager: callManager)
-                    DialButton(number: "0", manager: callManager)
-                    DialButton(number: "#", manager: callManager)
-                }
+//                KeyPad(callManager: callManager)
             }
         }
         .onChange(of: socket.outgoingCallerSid) { oldValue, newValue in
             fetchCallerId()
         }
+        
     }
     
     private func fetchCallerId() {
@@ -312,20 +269,6 @@ struct ContentView: View {
         }
     }
     
-}
-
-
-struct DialButton: View {
-    let number: String
-    let manager: CallManager
-    var body: some View {
-        Button(number) {
-            manager.sendDigit(digit: number)
-        }
-        .frame(width:40, height: 40)
-        .background(Color.blue)
-        .foregroundColor(Color.white)
-    }
 }
 
 #Preview {

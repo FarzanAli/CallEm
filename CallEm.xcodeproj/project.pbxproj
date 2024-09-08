@@ -11,6 +11,7 @@
 		9FD18E1F893A865D4F6E48F3 /* Pods_CallEm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE44637E04B44FEFF769AA4F /* Pods_CallEm.framework */; };
 		C035F8272C7BAFF500ABE31B /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = C035F8262C7BAFF500ABE31B /* SocketIO */; };
 		C035F8292C7BB03100ABE31B /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035F8282C7BB03100ABE31B /* Socket.swift */; };
+		C062EAC62C823DEE0042AA71 /* CallOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062EAC52C823DEE0042AA71 /* CallOptions.swift */; };
 		C087A3852C73AE6200DF7170 /* CallEmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3842C73AE6200DF7170 /* CallEmApp.swift */; };
 		C087A3872C73AE6200DF7170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3862C73AE6200DF7170 /* ContentView.swift */; };
 		C087A3892C73AE6300DF7170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C087A3882C73AE6300DF7170 /* Assets.xcassets */; };
@@ -18,8 +19,10 @@
 		C087A3962C73AE6300DF7170 /* CallEmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3952C73AE6300DF7170 /* CallEmTests.swift */; };
 		C087A3A02C73AE6300DF7170 /* CallEmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A39F2C73AE6300DF7170 /* CallEmUITests.swift */; };
 		C087A3A22C73AE6300DF7170 /* CallEmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087A3A12C73AE6300DF7170 /* CallEmUITestsLaunchTests.swift */; };
+		C0D50E762C7FBC6A00E16FC0 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D50E752C7FBC6A00E16FC0 /* KeyPad.swift */; };
 		C0D5C40D2C756A920036804A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5C40C2C756A920036804A /* TokenManager.swift */; };
 		C0D5C4102C756B9D0036804A /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = C0D5C40F2C756B9D0036804A /* SwiftJWT */; };
+		C0D8EF672C7FC25700FB8E75 /* VerifyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8EF662C7FC25700FB8E75 /* VerifyNumber.swift */; };
 		C0EF04CE2C7589710064476F /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C0EF04CD2C7589710064476F /* KeychainAccess */; };
 		FB8F7B0629CD3739341C800C /* Pods_CallEm_CallEmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094DA3341DAF79669128A953 /* Pods_CallEm_CallEmUITests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,7 @@
 		826A6C6A76E07E8D0982DC9E /* Pods-CallEm-CallEmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallEm-CallEmUITests.release.xcconfig"; path = "Target Support Files/Pods-CallEm-CallEmUITests/Pods-CallEm-CallEmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE44637E04B44FEFF769AA4F /* Pods_CallEm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallEm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C035F8282C7BB03100ABE31B /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		C062EAC52C823DEE0042AA71 /* CallOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOptions.swift; sourceTree = "<group>"; };
 		C087A3812C73AE6200DF7170 /* CallEm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallEm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C087A3842C73AE6200DF7170 /* CallEmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEmApp.swift; sourceTree = "<group>"; };
 		C087A3862C73AE6200DF7170 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +63,9 @@
 		C087A39B2C73AE6300DF7170 /* CallEmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallEmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C087A39F2C73AE6300DF7170 /* CallEmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEmUITests.swift; sourceTree = "<group>"; };
 		C087A3A12C73AE6300DF7170 /* CallEmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0D50E752C7FBC6A00E16FC0 /* KeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
 		C0D5C40C2C756A920036804A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		C0D8EF662C7FC25700FB8E75 /* VerifyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNumber.swift; sourceTree = "<group>"; };
 		E4950CAEF3FC34C575EB1997 /* Pods_CallEmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallEmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43D4F29D900AE0FD6AB1BD0 /* Pods-CallEmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallEmTests.release.xcconfig"; path = "Target Support Files/Pods-CallEmTests/Pods-CallEmTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA0C68B5AE8C82ABD34F1950 /* Pods-CallEm-CallEmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallEm-CallEmUITests.debug.xcconfig"; path = "Target Support Files/Pods-CallEm-CallEmUITests/Pods-CallEm-CallEmUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 				C087A38A2C73AE6300DF7170 /* Preview Content */,
 				C0D5C40C2C756A920036804A /* TokenManager.swift */,
 				C035F8282C7BB03100ABE31B /* Socket.swift */,
+				C0D50E752C7FBC6A00E16FC0 /* KeyPad.swift */,
+				C0D8EF662C7FC25700FB8E75 /* VerifyNumber.swift */,
+				C062EAC52C823DEE0042AA71 /* CallOptions.swift */,
 			);
 			path = CallEm;
 			sourceTree = "<group>";
@@ -427,8 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D50E762C7FBC6A00E16FC0 /* KeyPad.swift in Sources */,
 				C087A3872C73AE6200DF7170 /* ContentView.swift in Sources */,
 				C0D5C40D2C756A920036804A /* TokenManager.swift in Sources */,
+				C0D8EF672C7FC25700FB8E75 /* VerifyNumber.swift in Sources */,
+				C062EAC62C823DEE0042AA71 /* CallOptions.swift in Sources */,
 				C035F8292C7BB03100ABE31B /* Socket.swift in Sources */,
 				C087A3852C73AE6200DF7170 /* CallEmApp.swift in Sources */,
 			);
