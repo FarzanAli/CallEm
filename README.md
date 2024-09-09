@@ -1,7 +1,3 @@
 A barebones functionality demo:
 
-
-<video width="300" controls>
-  <source src="https://github.com/user-attachments/assets/02a7bbd1-e156-4c31-b393-e73bed2b3d7e" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/02a7bbd1-e156-4c31-b393-e73bed2b3d7e
